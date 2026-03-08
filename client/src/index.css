@@ -1,0 +1,88 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-panel-950 text-slate-100;
+  }
+
+  body {
+    @apply bg-panel-950 text-slate-100 font-body antialiased;
+    background-image:
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(79, 141, 255, 0.16),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at 82% 0%,
+        rgba(40, 216, 196, 0.14),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at 25% 90%,
+        rgba(245, 158, 11, 0.1),
+        transparent 38%
+      );
+  }
+
+  ::selection {
+    background: rgba(79, 141, 255, 0.35);
+    color: #eff6ff;
+  }
+
+  input[type="range"] {
+    accent-color: #4f8dff;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border border-slate-800/80 bg-panel-900/80 shadow-card backdrop-blur;
+  }
+
+  .panel-title {
+    @apply font-sans text-sm uppercase tracking-[0.16em] text-slate-400;
+  }
+
+  .input-base {
+    @apply w-full rounded-xl border border-slate-700 bg-panel-950/70 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-linear-500;
+  }
+
+  .btn-primary {
+    @apply rounded-xl bg-gradient-to-r from-linear-500 to-accent-500 px-4 py-2 text-sm font-semibold text-panel-950 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-subtle {
+    @apply rounded-xl border border-slate-700 bg-panel-900/70 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:border-slate-500;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-slate-400 transition hover:bg-panel-800/70 hover:text-slate-100;
+  }
+
+  .nav-link-active {
+    @apply bg-gradient-to-r from-linear-500/20 to-accent-500/20 text-slate-100 ring-1 ring-linear-500/40;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f355f;
+  border-radius: 999px;
+}
+
+.sm\:-mx-6 {
+  margin-right: 0rem !important;
+}
+
+.md\:-mx-8 {
+  margin-right: 0rem !important;
+}
