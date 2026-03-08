@@ -12,3 +12,4 @@ backend/uploads/*
 !backend/uploads/.gitkeep
 .DS_Store
 npm-debug.log*
+netlify.toml
